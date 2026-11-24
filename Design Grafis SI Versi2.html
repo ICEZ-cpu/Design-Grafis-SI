@@ -1,0 +1,425 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Modul Belajar CorelDRAW & Kuis Interaktif</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    .accordion-content {
+      transition: max-height 0.3s ease-out, opacity 0.3s ease-out;
+      max-height: 0;
+      overflow: hidden;
+      opacity: 0;
+    }
+    .accordion-item.active .accordion-content {
+      max-height: 1500px;
+      opacity: 1;
+    }
+    .accordion-item.active .accordion-icon {
+      transform: rotate(180deg);
+    }
+  </style>
+</head>
+<body class="bg-slate-50 text-slate-800 font-sans antialiased">
+
+  <!-- Header -->
+  <header class="bg-gradient-to-r from-emerald-600 to-teal-700 text-white shadow-lg">
+    <div class="max-w-4xl mx-auto px-6 py-8">
+      <div class="flex flex-col md:flex-row md:items-center md:justify-between gap-4">
+        <div>
+          <span class="inline-block bg-emerald-500/40 text-emerald-50 text-xs font-semibold px-3 py-1 rounded-full mb-2 uppercase tracking-wider">
+            Modul Desain Grafis
+          </span>
+          <h1 class="text-3xl font-bold tracking-tight">CorelDRAW Dasar (Bab 1 – 7)</h1>
+          <p class="text-emerald-100 mt-1 text-sm md:text-base">
+            Penjelasan simpel, praktis, dan dilengkapi kuis interaktif.
+          </p>
+        </div>
+        <div class="flex gap-2">
+          <button onclick="switchTab('modul')" id="tab-modul" class="px-4 py-2 rounded-lg font-semibold text-sm bg-white text-emerald-700 shadow transition">
+            📖 Materi Modul
+          </button>
+          <button onclick="switchTab('kuis')" id="tab-kuis" class="px-4 py-2 rounded-lg font-semibold text-sm bg-emerald-800/60 text-white hover:bg-emerald-800 transition">
+            🎯 Kuis Interaktif
+          </button>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- Main Content -->
+  <main class="max-w-4xl mx-auto px-6 py-8">
+
+    <!-- SECTION: MODUL -->
+    <section id="section-modul" class="space-y-4">
+      <div class="flex items-center justify-between mb-4">
+        <h2 class="text-xl font-bold text-slate-800">Ringkasan Materi per Bab</h2>
+        <button onclick="toggleAll(true)" class="text-xs font-medium text-emerald-600 hover:underline">Buka Semua</button>
+      </div>
+
+      <!-- BAB 1 -->
+      <div class="accordion-item bg-white rounded-xl shadow-sm border border-slate-200 overflow-hidden active">
+        <button onclick="toggleAccordion(this)" class="w-full px-6 py-4 text-left flex items-center justify-between hover:bg-slate-50 transition">
+          <div>
+            <span class="text-xs font-bold text-emerald-600 uppercase">Bab 1</span>
+            <h3 class="text-lg font-bold text-slate-800">Pengenalan CorelDRAW, Rectangle & Ellipse</h3>
+          </div>
+          <svg class="accordion-icon w-5 h-5 text-slate-400 transition-transform duration-200" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
+        </button>
+        <div class="accordion-content px-6 pb-5 text-sm text-slate-600 space-y-3 border-t border-slate-100 pt-4">
+          <p><strong>CorelDRAW</strong> adalah program desain grafis vektor populer untuk menggambar, menyunting, dan menulis.</p>
+          <ul class="list-disc pl-5 space-y-1">
+            <li><strong>Area Kerja Utama:</strong> Title Bar, Menu Bar, ToolBar, Property Bar (pengaturan alat aktif), Ruler (penggaris), Drawing Window, Drawing Page (kertas kerja), FlyOut, dan Color Palette.</li>
+            <li><strong>Rectangle Tool (Kotak):</strong>
+              <ul class="list-circle pl-5 mt-1 text-slate-500">
+                <li>Tahan <strong>Ctrl</strong> = membuat bujur sangkar (persegi sama sisi).</li>
+                <li>Tahan <strong>Shift</strong> = menggambar dari titik tengah.</li>
+                <li>Tahan <strong>Ctrl + Shift</strong> = persegi sama sisi dari titik tengah.</li>
+              </ul>
+            </li>
+            <li><strong>Ellipse Tool (Lingkaran):</strong> Untuk membuat elips, lingkaran sempurna (tahan <strong>Shift</strong>/<strong>Ctrl</strong>), <em>Arc</em> (busur), dan <em>Pie</em> (potongan kue).</li>
+            <li><strong>Color Palette:</strong> <strong>Klik Kiri</strong> untuk warna isi (<em>Fill</em>), <strong>Klik Kanan</strong> untuk warna garis tepi (<em>Outline</em>).</li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- BAB 2 -->
+      <div class="accordion-item bg-white rounded-xl shadow-sm border border-slate-200 overflow-hidden">
+        <button onclick="toggleAccordion(this)" class="w-full px-6 py-4 text-left flex items-center justify-between hover:bg-slate-50 transition">
+          <div>
+            <span class="text-xs font-bold text-emerald-600 uppercase">Bab 2</span>
+            <h3 class="text-lg font-bold text-slate-800">Polygon, Star, Spiral, dan Grid</h3>
+          </div>
+          <svg class="accordion-icon w-5 h-5 text-slate-400 transition-transform duration-200" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
+        </button>
+        <div class="accordion-content px-6 pb-5 text-sm text-slate-600 space-y-3 border-t border-slate-100 pt-4">
+          <ul class="list-disc pl-5 space-y-2">
+            <li><strong>Polygon & Star Tool:</strong> Untuk membuat segi banyak dan bintang. Di Property Bar kita bisa mengatur <em>Number of points</em> (jumlah sudut) dan <em>Sharpness</em> (ketajaman sudut bintang, aktif jika titik > 7).</li>
+            <li><strong>Spiral Tool:</strong> Membuat garis melingkar. Ada 2 jenis:
+              <ul class="list-circle pl-5 mt-1 text-slate-500">
+                <li><em>Symmetrical Spiral:</em> Jarak antar putaran sama rata.</li>
+                <li><em>Logarithmic Spiral:</em> Jarak putaran makin melebar ke luar.</li>
+              </ul>
+            </li>
+            <li><strong>Graph Paper Tool (Grid):</strong> Membuat kotak-kotak tabel/grid. Jumlah baris dan kolom diatur lewat Property Bar.</li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- BAB 3 -->
+      <div class="accordion-item bg-white rounded-xl shadow-sm border border-slate-200 overflow-hidden">
+        <button onclick="toggleAccordion(this)" class="w-full px-6 py-4 text-left flex items-center justify-between hover:bg-slate-50 transition">
+          <div>
+            <span class="text-xs font-bold text-emerald-600 uppercase">Bab 3</span>
+            <h3 class="text-lg font-bold text-slate-800">Transformasi & Urutan Objek</h3>
+          </div>
+          <svg class="accordion-icon w-5 h-5 text-slate-400 transition-transform duration-200" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
+        </button>
+        <div class="accordion-content px-6 pb-5 text-sm text-slate-600 space-y-3 border-t border-slate-100 pt-4">
+          <p>Menu: <strong>Arrange &rarr; Transformations</strong> memiliki 5 fungsi utama:</p>
+          <ul class="list-disc pl-5 space-y-1">
+            <li><strong>Position:</strong> Memindahkan objek secara presisi (koordinat X/Y atau posisi relatif).</li>
+            <li><strong>Rotation:</strong> Memutar objek sesuai sudut derajat.</li>
+            <li><strong>Scale:</strong> Mengubah skala ukuran (%) dan mencerminkan (<em>mirror</em>) objek.</li>
+            <li><strong>Size:</strong> Mengubah ukuran objek dengan angka pasti.</li>
+            <li><strong>Skew:</strong> Memiringkan objek secara horizontal atau vertikal.</li>
+          </ul>
+          <p class="pt-2"><strong>Mengatur Tumpukan Objek (Arrange &rarr; Order):</strong></p>
+          <ul class="list-disc pl-5 space-y-1 text-slate-500">
+            <li><em>To Front / To Back of Layer:</em> Paling depan / paling belakang.</li>
+            <li><em>Forward One / Back One:</em> Maju satu langkah / mundur satu langkah.</li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- BAB 4 -->
+      <div class="accordion-item bg-white rounded-xl shadow-sm border border-slate-200 overflow-hidden">
+        <button onclick="toggleAccordion(this)" class="w-full px-6 py-4 text-left flex items-center justify-between hover:bg-slate-50 transition">
+          <div>
+            <span class="text-xs font-bold text-emerald-600 uppercase">Bab 4</span>
+            <h3 class="text-lg font-bold text-slate-800">Pembentukan Garis dan Kurva</h3>
+          </div>
+          <svg class="accordion-icon w-5 h-5 text-slate-400 transition-transform duration-200" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
+        </button>
+        <div class="accordion-content px-6 pb-5 text-sm text-slate-600 space-y-3 border-t border-slate-100 pt-4">
+          <p><strong>Garis Terbuka</strong> = ujung tidak bertemu (tidak bisa diisi warna <em>Fill</em>). <strong>Garis Tertutup</strong> = ujung bertemu (bisa diisi warna <em>Fill</em>).</p>
+          <ul class="list-disc pl-5 space-y-1">
+            <li><strong>Freehand Tool:</strong> Menggambar bebas seperti pensil.</li>
+            <li><strong>2-Point Line:</strong> Menggambar garis lurus dari titik awal ke akhir.</li>
+            <li><strong>Bezier & Pen Tool:</strong> Menggambar garis lengkung/kurva presisi dengan titik-titik <em>node</em>.</li>
+            <li><strong>Artistic Media:</strong> Membuat garis artistik seperti kaligrafi atau kuas.</li>
+            <li><strong>B-Spline & 3-Point Curve:</strong> Membuat kurva lengkung yang halus dengan mudah.</li>
+            <li><strong>Polyline:</strong> Menggambar garis bersambung/segi banyak (klik ganda untuk mengakhiri).</li>
+            <li><strong>Smart Drawing:</strong> Mengubah coretan tangan kasar menjadi garis/bentuk yang rapi otomatis.</li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- BAB 5 -->
+      <div class="accordion-item bg-white rounded-xl shadow-sm border border-slate-200 overflow-hidden">
+        <button onclick="toggleAccordion(this)" class="w-full px-6 py-4 text-left flex items-center justify-between hover:bg-slate-50 transition">
+          <div>
+            <span class="text-xs font-bold text-emerald-600 uppercase">Bab 5</span>
+            <h3 class="text-lg font-bold text-slate-800">Pengeditan Objek (Node & Kurva)</h3>
+          </div>
+          <svg class="accordion-icon w-5 h-5 text-slate-400 transition-transform duration-200" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
+        </button>
+        <div class="accordion-content px-6 pb-5 text-sm text-slate-600 space-y-3 border-t border-slate-100 pt-4">
+          <p>Agar bentuk dasar (seperti kotak/lingkaran) bisa diubah bebas, ubah dulu menjadi kurva lewat <strong>Arrange &rarr; Convert to Curve</strong>, lalu edit memakai <strong>Shape Tool</strong>.</p>
+          <ul class="list-disc pl-5 space-y-1">
+            <li><strong>Node:</strong> Titik hitam kecil di sepanjang garis objek.</li>
+            <li><strong>Segment:</strong> Garis yang menghubungkan dua node.</li>
+            <li><strong>3 Tipe Node:</strong>
+              <ul class="list-circle pl-5 mt-1 text-slate-500">
+                <li><em>Cusp (Tajam):</em> Kedua tuas kontrol bergerak bebas, cocok untuk sudut lancip.</li>
+                <li><em>Smooth (Halus):</em> Tuas kontrol sejajar lurus, cocok untuk lengkungan mulus.</li>
+                <li><em>Symmetrical (Simetris):</em> Tuas kontrol sejajar dan panjangnya sama persis.</li>
+              </ul>
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- BAB 6 -->
+      <div class="accordion-item bg-white rounded-xl shadow-sm border border-slate-200 overflow-hidden">
+        <button onclick="toggleAccordion(this)" class="w-full px-6 py-4 text-left flex items-center justify-between hover:bg-slate-50 transition">
+          <div>
+            <span class="text-xs font-bold text-emerald-600 uppercase">Bab 6</span>
+            <h3 class="text-lg font-bold text-slate-800">Pengolahan Teks (Text Tool)</h3>
+          </div>
+          <svg class="accordion-icon w-5 h-5 text-slate-400 transition-transform duration-200" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
+        </button>
+        <div class="accordion-content px-6 pb-5 text-sm text-slate-600 space-y-3 border-t border-slate-100 pt-4">
+          <p>Ada 2 jenis teks di CorelDRAW:</p>
+          <ul class="list-disc pl-5 space-y-1">
+            <li><strong>Artistic Text:</strong> Untuk teks pendek/judul. Mudah diberi efek (seperti <em>Extrude</em> atau melengkung mengikuti garis).</li>
+            <li><strong>Paragraph Text:</strong> Untuk teks panjang (artikel/brosur), mendukung kolom, <em>bullet</em>, dan <em>dropcap</em>.</li>
+          </ul>
+          <p class="pt-1"><strong>Fitur Penting:</strong> <em>Text &rarr; Fit Text to Path</em> digunakan untuk menempelkan teks agar mengikuti bentuk garis/kurva.</p>
+        </div>
+      </div>
+
+      <!-- BAB 7 -->
+      <div class="accordion-item bg-white rounded-xl shadow-sm border border-slate-200 overflow-hidden">
+        <button onclick="toggleAccordion(this)" class="w-full px-6 py-4 text-left flex items-center justify-between hover:bg-slate-50 transition">
+          <div>
+            <span class="text-xs font-bold text-emerald-600 uppercase">Bab 7</span>
+            <h3 class="text-lg font-bold text-slate-800">Gradasi Warna, Outline & Fill</h3>
+          </div>
+          <svg class="accordion-icon w-5 h-5 text-slate-400 transition-transform duration-200" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
+        </button>
+        <div class="accordion-content px-6 pb-5 text-sm text-slate-600 space-y-3 border-t border-slate-100 pt-4">
+          <ul class="list-disc pl-5 space-y-2">
+            <li><strong>Outline Tool (F12):</strong> Mengatur ketebalan garis tepi, warna garis, dan pola garis (putus-putus atau lurus).</li>
+            <li><strong>Fill Tool:</strong> Mengatur warna isi objek.
+              <ul class="list-circle pl-5 mt-1 text-slate-500">
+                <li><em>Interactive Fill (G):</em> Memberi warna solid atau gradasi (perpaduan 2+ warna) secara langsung.</li>
+                <li><em>Smart Fill:</em> Mewarnai area tertutup hasil perpotongan beberapa objek.</li>
+                <li><em>Mesh Fill (M):</em> Gradasi warna kompleks menggunakan jaring-jaring titik bantu.</li>
+              </ul>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION: KUIS -->
+    <section id="section-kuis" class="hidden">
+      <div class="bg-white rounded-2xl shadow-sm border border-slate-200 p-6 md:p-8">
+        <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-4 border-b border-slate-100 pb-4 mb-6">
+          <div>
+            <h2 class="text-xl font-bold text-slate-800">Kuis Interaktif CorelDRAW</h2>
+            <p class="text-sm text-slate-500">Pilih jawaban yang paling tepat untuk menguji pemahamanmu.</p>
+          </div>
+          <div class="bg-emerald-50 text-emerald-700 px-4 py-2 rounded-lg text-sm font-bold text-center">
+            Skor: <span id="score-display">0</span> / <span id="total-display">10</span>
+          </div>
+        </div>
+
+        <div id="quiz-container" class="space-y-6"></div>
+
+        <div class="mt-8 pt-6 border-t border-slate-100 flex items-center justify-between">
+          <p id="quiz-status" class="text-sm font-medium text-slate-500">Jawab semua pertanyaan untuk melihat hasil akhir.</p>
+          <button onclick="resetQuiz()" class="px-5 py-2.5 bg-slate-800 hover:bg-slate-900 text-white text-sm font-semibold rounded-lg transition">
+            🔄 Ulangi Kuis
+          </button>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <script>
+    // Tab Switching
+    function switchTab(tab) {
+      const modulSec = document.getElementById('section-modul');
+      const kuisSec = document.getElementById('section-kuis');
+      const tabModul = document.getElementById('tab-modul');
+      const tabKuis = document.getElementById('tab-kuis');
+
+      if (tab === 'modul') {
+        modulSec.classList.remove('hidden');
+        kuisSec.classList.add('hidden');
+        tabModul.className = 'px-4 py-2 rounded-lg font-semibold text-sm bg-white text-emerald-700 shadow transition';
+        tabKuis.className = 'px-4 py-2 rounded-lg font-semibold text-sm bg-emerald-800/60 text-white hover:bg-emerald-800 transition';
+      } else {
+        modulSec.classList.add('hidden');
+        kuisSec.classList.remove('hidden');
+        tabKuis.className = 'px-4 py-2 rounded-lg font-semibold text-sm bg-white text-emerald-700 shadow transition';
+        tabModul.className = 'px-4 py-2 rounded-lg font-semibold text-sm bg-emerald-800/60 text-white hover:bg-emerald-800 transition';
+      }
+    }
+
+    // Accordion Logic
+    function toggleAccordion(btn) {
+      const item = btn.parentElement;
+      item.classList.toggle('active');
+    }
+
+    function toggleAll(open) {
+      document.querySelectorAll('.accordion-item').forEach(item => {
+        if (open) item.classList.add('active');
+        else item.classList.remove('active');
+      });
+    }
+
+    // Quiz Data
+    const quizData = [
+      {
+        q: "Tombol keyboard apa yang harus ditahan saat menggunakan Rectangle Tool agar membentuk persegi sama sisi (bujur sangkar)?",
+        options: ["Alt", "Ctrl", "Shift", "Space"],
+        answer: 1,
+        exp: "Menahan tombol Ctrl saat menarik Rectangle Tool akan mengunci rasio menjadi bujur sangkar."
+      },
+      {
+        q: "Bagaimana cara memberi warna pada garis tepi (Outline) objek menggunakan Color Palette?",
+        options: ["Klik kiri pada warna", "Klik kanan pada warna", "Klik ganda pada warna", "Tahan Shift + Klik kiri"],
+        answer: 1,
+        exp: "Klik kiri mengisi warna dalam (Fill), sedangkan klik kanan memberi warna garis tepi (Outline)."
+      },
+      {
+        q: "Tool apa yang digunakan untuk membuat objek berbentuk tabel/kotak-kotak (Grid)?",
+        options: ["Polygon Tool", "Spiral Tool", "Graph Paper Tool", "Smart Drawing"],
+        answer: 2,
+        exp: "Graph Paper Tool digunakan untuk membuat grid yang terdiri dari baris dan kolom."
+      },
+      {
+        q: "Pada menu Transformations, perintah 'Skew' berfungsi untuk...",
+        options: ["Memutar objek", "Mengubah ukuran objek", "Memiringkan objek secara horizontal/vertikal", "Memindahkan posisi objek"],
+        answer: 2,
+        exp: "Skew berfungsi untuk memiringkan objek."
+      },
+      {
+        q: "Perintah 'To Front of Layer' pada Arrange > Order digunakan untuk...",
+        options: ["Memindahkan objek ke urutan paling belakang", "Memindahkan objek ke urutan paling depan", "Menghapus objek", "Menggabungkan dua objek"],
+        answer: 1,
+        exp: "To Front of Layer meletakkan objek aktif di lapisan paling atas/depan."
+      },
+      {
+        q: "Tool yang berfungsi mengubah coretan tangan kasar menjadi garis atau bentuk yang halus dan rapi secara otomatis adalah...",
+        options: ["Freehand Tool", "Bezier Tool", "Smart Drawing", "Polyline Tool"],
+        answer: 2,
+        exp: "Smart Drawing secara otomatis menghaluskan coretan tangan menjadi bentuk presisi."
+      },
+      {
+        q: "Sebelum mengedit titik-titik (Node) pada objek kotak atau lingkaran menggunakan Shape Tool, objek harus diubah dulu melalui perintah...",
+        options: ["Arrange > Convert to Curve", "Arrange > Group", "Text > Fit Text to Path", "Effects > Blend"],
+        answer: 0,
+        exp: "Objek dasar harus dikonversi ke kurva (Convert to Curve) agar node-nya bisa diolah bebas."
+      },
+      {
+        q: "Tipe node yang kedua tuas kontrolnya bergerak bebas dan tidak saling memengaruhi (cocok untuk sudut tajam) disebut...",
+        options: ["Smooth", "Symmetrical", "Cusp", "Segment"],
+        answer: 2,
+        exp: "Node Cusp membuat kedua titik kontrol bergerak bebas untuk membentuk sudut tajam."
+      },
+      {
+        q: "Perintah untuk menempelkan teks agar melengkung mengikuti bentuk garis atau kurva adalah...",
+        options: ["Text > Convert to Artistic Text", "Text > Fit Text to Path", "Text > Straighten Text", "Text > Dropcaps"],
+        answer: 1,
+        exp: "Fit Text to Path menempatkan teks mengikuti alur garis/path."
+      },
+      {
+        q: "Tool yang digunakan untuk mewarnai area tertutup hasil perpotongan beberapa objek adalah...",
+        options: ["Mesh Fill", "Smart Fill", "Outline Pen", "Interactive Fill"],
+        answer: 1,
+        exp: "Smart Fill mendeteksi area tertutup dari perpotongan objek dan langsung mengisinya dengan warna."
+      }
+    ];
+
+    let score = 0;
+    let answeredCount = 0;
+
+    function renderQuiz() {
+      const container = document.getElementById('quiz-container');
+      container.innerHTML = '';
+      document.getElementById('total-display').textContent = quizData.length;
+      document.getElementById('score-display').textContent = '0';
+      document.getElementById('quiz-status').textContent = 'Jawab semua pertanyaan untuk melihat hasil akhir.';
+      score = 0;
+      answeredCount = 0;
+
+      quizData.forEach((item, idx) => {
+        const card = document.createElement('div');
+        card.className = 'p-5 rounded-xl border border-slate-200 bg-slate-50/50';
+        card.innerHTML = `
+          <p class="font-semibold text-slate-800 mb-3">${idx + 1}. ${item.q}</p>
+          <div class="grid grid-cols-1 sm:grid-cols-2 gap-2.5" id="options-${idx}">
+            ${item.options.map((opt, oIdx) => `
+              <button onclick="checkAnswer(${idx}, ${oIdx}, this)" 
+                class="text-left px-4 py-2.5 rounded-lg border border-slate-200 bg-white hover:bg-emerald-50 hover:border-emerald-300 text-sm text-slate-700 transition font-medium">
+                ${String.fromCharCode(65 + oIdx)}. ${opt}
+              </button>
+            `).join('')}
+          </div>
+          <p id="exp-${idx}" class="hidden mt-3 text-xs p-3 rounded-lg font-medium"></p>
+        `;
+        container.appendChild(card);
+      });
+    }
+
+    function checkAnswer(qIdx, oIdx, btn) {
+      const optionsDiv = document.getElementById(`options-${qIdx}`);
+      const buttons = optionsDiv.querySelectorAll('button');
+      const expEl = document.getElementById(`exp-${qIdx}`);
+      const correctIdx = quizData[qIdx].answer;
+
+      // Disable all buttons for this question
+      buttons.forEach(b => b.disabled = true);
+      answeredCount++;
+
+      if (oIdx === correctIdx) {
+        score++;
+        btn.classList.remove('bg-white', 'border-slate-200');
+        btn.classList.add('bg-emerald-100', 'border-emerald-500', 'text-emerald-800');
+        expEl.className = 'mt-3 text-xs p-3 rounded-lg font-medium bg-emerald-50 text-emerald-700 block';
+        expEl.textContent = '✅ Benar! ' + quizData[qIdx].exp;
+      } else {
+        btn.classList.remove('bg-white', 'border-slate-200');
+        btn.classList.add('bg-rose-100', 'border-rose-500', 'text-rose-800');
+        buttons[correctIdx].classList.remove('bg-white', 'border-slate-200');
+        buttons[correctIdx].classList.add('bg-emerald-100', 'border-emerald-500', 'text-emerald-800');
+        expEl.className = 'mt-3 text-xs p-3 rounded-lg font-medium bg-rose-50 text-rose-700 block';
+        expEl.textContent = '❌ Kurang tepat. ' + quizData[qIdx].exp;
+      }
+
+      document.getElementById('score-display').textContent = score;
+
+      if (answeredCount === quizData.length) {
+        const statusEl = document.getElementById('quiz-status');
+        const percent = Math.round((score / quizData.length) * 100);
+        statusEl.textContent = `Selesai! Nilai akhir kamu: ${percent}% (${score} dari ${quizData.length} benar).`;
+        statusEl.className = 'text-sm font-bold text-emerald-700';
+      }
+    }
+
+    function resetQuiz() {
+      renderQuiz();
+    }
+
+    // Initialize
+    renderQuiz();
+  </script>
+</body>
+</html>
